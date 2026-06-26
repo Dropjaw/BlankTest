@@ -1,0 +1,24 @@
+<Window x:Class="BlankTest.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:BlankTest.App.Views.MatchRules"
+        Title="EmailManagement" Width="1600" Height="900" MinWidth="1180" MinHeight="720" Background="{StaticResource PageBackgroundBrush}">
+    <Grid>
+        <Grid.RowDefinitions><RowDefinition Height="38" /><RowDefinition Height="*" /><RowDefinition Height="56" /></Grid.RowDefinitions>
+        <Border Background="White" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="0,0,0,1">
+            <DockPanel Margin="10,0"><TextBlock Text="▰  EmailManagement" VerticalAlignment="Center" FontWeight="SemiBold" /><StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center"><TextBlock Text="Welcome, Admin" Margin="0,0,18,0" /><TextBlock Text="⚙ Options⌄" Margin="0,0,24,0" /><TextBlock Text="ⓘ Help⌄" /></StackPanel></DockPanel>
+        </Border>
+        <Grid Grid.Row="1"><Grid.ColumnDefinitions><ColumnDefinition Width="255" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+            <Border Background="White" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="0,0,1,0"><Grid Margin="20,24,16,20"><Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                <StackPanel><TextBlock Text="EmailManagement" FontSize="24" FontWeight="Bold" Foreground="{StaticResource PrimaryBlueBrush}" /><Border Height="1" Margin="0,18,0,18" Background="{StaticResource CardBorderBrush}" />
+                    <TextBlock Style="{StaticResource NavItemTextStyle}" Text="⌂   Dashboard" /><TextBlock Style="{StaticResource NavItemTextStyle}" Text="⌘   Applications" /><TextBlock Style="{StaticResource NavItemTextStyle}" Text="□   Modules" /><TextBlock Style="{StaticResource NavItemTextStyle}" Text="♙   Recipients" /><TextBlock Style="{StaticResource NavItemTextStyle}" Text="✉   Email Types" />
+                    <Border Style="{StaticResource ActiveNavItemStyle}"><TextBlock Text="▽   Match Rules" FontWeight="SemiBold" Foreground="{StaticResource PrimaryBlueBrush}" /></Border>
+                    <TextBlock Style="{StaticResource NavItemTextStyle}" Text="↔   Recipient Mappings" /><TextBlock Style="{StaticResource NavItemTextStyle}" Text="⌕   Test Match" /><TextBlock Style="{StaticResource NavItemTextStyle}" Text="▧   Processing Logs" /><TextBlock Style="{StaticResource NavItemTextStyle}" Text="⚙   Settings" />
+                </StackPanel>
+                <Border Grid.Row="2" Style="{StaticResource EnterpriseCardStyle}" Padding="14"><StackPanel><TextBlock Text="About EmailManagement" FontWeight="SemiBold" /><TextBlock Text="Version 2.3.0" Margin="0,4,0,0" Foreground="{StaticResource TextSecondaryBrush}" /></StackPanel></Border>
+            </Grid></Border>
+            <views:MatchRulesView Grid.Column="1" />
+        </Grid>
+        <Border Grid.Row="2" Background="White" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="0,1,0,0"><DockPanel Margin="20,0"><StackPanel Orientation="Horizontal" VerticalAlignment="Center"><TextBlock Text="Connected to: EmailManagementDB" Margin="0,0,42,0" /><TextBlock Text="Environment: Production" Margin="0,0,42,0" /><TextBlock Text="Last Refresh: 5/20/2025 10:52:22 AM" /></StackPanel><Button DockPanel.Dock="Right" Content="⟳  Refresh" Style="{StaticResource SecondaryOutlineButtonStyle}" AutomationProperties.Name="Refresh match rules" /></DockPanel></Border>
+    </Grid>
+</Window>
