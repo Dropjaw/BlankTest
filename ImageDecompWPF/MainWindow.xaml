@@ -1,0 +1,29 @@
+<Window x:Class="ImageDecompWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Image Decomposition WPF"
+        Width="1200"
+        Height="800"
+        MinWidth="900"
+        MinHeight="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#F3F4F6">
+        <Border Margin="24"
+                Padding="24"
+                Background="White"
+                BorderBrush="#E5E7EB"
+                BorderThickness="1"
+                CornerRadius="12">
+            <StackPanel>
+                <TextBlock Text="ImageDecompWPF"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Foreground="#111827" />
+                <TextBlock Margin="0,8,0,0"
+                           Text="WPF host project for image decomposition UI experiments."
+                           FontSize="14"
+                           Foreground="#6B7280" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
