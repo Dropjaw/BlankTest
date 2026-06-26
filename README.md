@@ -1,20 +1,32 @@
 # BlankTest
 
-This repository contains the `TEST2` .NET project.
-
-## Project
+This repository contains the following .NET projects:
 
 - `TEST2/TEST2.csproj`
-- `TEST2/Program.cs`
+- `ImageDecompWPF/ImageDecompWPF.csproj`
 
-## Build
+## Visual Studio
 
-```bash
-dotnet build
+Open:
+
+```text
+ImageDecompWPF.sln
 ```
 
-## Run
+## Build ImageDecompWPF
 
 ```bash
-dotnet run --project TEST2/TEST2.csproj
+dotnet build ImageDecompWPF/ImageDecompWPF.csproj
+```
+
+## Run ImageDecompWPF
+
+```bash
+dotnet run --project ImageDecompWPF/ImageDecompWPF.csproj
+```
+
+## Build TEST2
+
+```bash
+dotnet build TEST2/TEST2.csproj
 ```
