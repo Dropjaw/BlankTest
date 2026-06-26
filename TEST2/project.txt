@@ -1,0 +1,3 @@
+Project name: TEST2
+Target framework: net8.0
+Project type: console application
